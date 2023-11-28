@@ -1,0 +1,75 @@
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    z-index: 100;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    .nav-logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+        gap: 10px;
+        img{
+            margin-top: 5px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            float: left;
+            border: 2px solid white;
+        }
+        h2{
+            text-align: center;
+            font-size: 1.4rem;
+            border-bottom: 2px solid yellowgreen;
+            border-radius: 3px;
+            font-weight: 100;
+            background: linear-gradient(gold,lightgreen);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+    }
+    .links{
+        width: 50%;
+        li{
+            font-size: 1.2rem;
+            cursor: pointer;
+            background: linear-gradient(gold,lightgreen);
+            -webkit-background-clip: text;
+            color: transparent;
+            &:hover{
+                background: linear-gradient(white,lightgreen);
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+        }
+    }
+    .social{
+            width: 15%;
+
+        li i{
+            font-size: 1.3rem;
+            cursor: pointer;
+            background: linear-gradient(gold,lightgreen);
+            -webkit-background-clip: text;
+            color: transparent;
+            &:hover{
+                color: gold;
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.add-service-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    width: 45%;
+    height: 55%;
+    background: slategrey;
+    border-radius: 14px;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 10px 0px #000000a6;
+    #close-add-service{
+        position: absolute;
+        top: 5px;
+        right: 6px;
+        width: fit-content;
+        height: fit-content;
+        color: rgba(192, 11, 11, 0.766);
+        text-shadow: 0px 0px 1px black;
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 111111;
+        i{
+            font-size: 1.2rem;
+            &:hover{
+                color: red;
+            }
+        }
+    }
+    .add-service-form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        padding-bottom: 10px;
+        fieldset{
+            width: fit-content;
+            background: none;
+            padding: 2px 10px;
+            border-radius: 5px;
+            border: 2px solid black;
+            legend{
+                color: black;
+                font-weight: 100;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+            input{
+                width: 20vw;
+                background: none;
+                border: none;
+                text-align: center;
+                color: gold;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        input[type="submit"]{
+            font-size: 1rem;
+            padding: 5px 10px;
+            height: fit-content;
+            width: fit-content;
+            letter-spacing: 2px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #2c503f;
+            color: white;
+            &:hover{
+                background: #347758;
+                color: gold;
+            }
+        }
+    }
+}

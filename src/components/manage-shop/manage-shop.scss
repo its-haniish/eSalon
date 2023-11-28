@@ -1,0 +1,299 @@
+.setup-heading{
+    width: 100%;
+    height: fit-content;
+    margin-top: 6px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    background: linear-gradient(to right,red,orange,red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.setup-form{
+        margin-top: 10vh;
+        width: 100%;
+        height: 90vh;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+            background: none;
+            border: none;
+            border-bottom: 2px solid #2c503f;
+            text-align: center;
+            padding: 2px;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            background: linear-gradient(to right,brown,blue);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 200;
+        }
+        #owner-name{
+            position: absolute;
+            top: 0;
+            left: 16px;
+            border: none;
+
+        }
+        #shop-name{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.6rem;
+            border: none;
+            font-weight: 400;
+            background: linear-gradient(to right,white,skyblue,white);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+        #email{
+            position: absolute;
+            top: 0;
+            right: 16px;
+            border: none;
+
+        }
+        #phone,#address,#coordinates-btn{
+            width: 20%;
+            background: #2c503f5c;
+            color: gold;
+            border: 2px solid gold;
+            border-radius: 10px;
+            padding: 5px 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            font-weight: 200;
+            &::placeholder{
+                color: rgba(255, 217, 0, 0.558);
+                font-weight: 200;
+            }
+        }
+        #address{
+            height: 20vh;
+        }
+        
+        #coordinates-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: yellowgreen;
+        }   
+
+        .service-box-main{
+            display: flex;
+            top: 10vh;
+            right: 30vh;
+            width: 50%;
+            height: 75%;
+            .service-box{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                background: #0000004d;
+                 
+            }
+            
+        }
+
+
+        .main-logo-box{
+            top: 10vh;
+            left: 12vw;
+            .shop-icon-box{
+                height: 100px;
+                width: 100px;
+                position: relative;
+                padding: 0;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 2px solid #2c503f;
+                .shop-logo{
+                    display: none;
+                }
+                img{
+                    position: absolute;
+                    top: -50%;
+                    left: -50%;
+                    transform: translate(50%, 50%);
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    display: inline;
+                    z-index: 1;
+                }
+                i,input[type="file"]{
+                    border-top: 2px  solid #2c503f;
+                    width: 100%;
+                    position: absolute;
+                    font-size: 1.4rem;
+                    color: #287a54;
+                    z-index: 10;
+                    background-color: rgba(128, 128, 128, 0.604);
+                    width: 100%;
+                    text-align: center;
+                    padding-top: 3px;
+                    height: 35%;
+                    left: 52%;
+                    bottom: 0;
+                    font-weight: 100;
+                    transform: translateX(-50%);
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                input[type="file"]{
+                    padding-top: 0;
+                    z-index: 11;
+                    opacity: 0;
+                    font-size: 0.01px;
+                }
+            }
+        }
+
+
+    input[type="submit"]{
+        font-size: 1.3rem;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding: 5px 10px;
+        height: fit-content;
+        width: 9vw;
+        letter-spacing: 2px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #2c503f;
+        color: white;
+        transition: all 0.3s ease-in-out;
+        transform: scale(0.95);
+        &:hover{
+            background: #347758;
+            color: gold;
+            transform: scale(1);
+            border: 1px solid yellowgreen;
+        }
+    }
+
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+        height: 90%;        
+        #phone,#address{
+            width: 45%;
+        }
+        #coordinates-btn{
+            width: 40%;
+            transform: scale(0.95);
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                transform: scale(1);
+                color: gold;
+                border: 2px solid yellowgreen;
+            }
+        }
+
+    }
+    .right{
+        padding-top: 16px;
+        width: 50%;
+        height: 90%;
+        h2{
+            font-size: 2rem;
+            border: none;
+            width: 80%;
+
+        }
+        table{
+            width: 80%;
+            height: fit-content;
+            max-height: 60vh;
+            overflow-y: scroll;
+            tr{
+                width: 60%;
+            }
+            thead tr th{
+                font-size: 1.5rem;
+                font-weight: 100;
+                color: lightblue;
+                text-decoration: underline;
+            }
+            tr th, tr td{
+                text-align: center;
+                button{
+                    background: none;
+                    border: none;
+                    i{
+                        padding-top: 5px;
+                        font-size: 1.3rem;
+                        color: yellowgreen;
+                        &:hover{
+                            cursor: pointer;
+                            color: gold;
+                        }
+                    }
+
+                }
+            }
+            tr th button i{
+                padding-top: 10px;
+            }
+            tr td{
+                font-size: 1.2rem;
+                font-weight: 200;
+                button{
+                    i{
+                        color: rgba(255, 0, 0, 0.516);
+                        font-size: 1rem;
+                        text-shadow: 0px 0px 0px black;
+                    }
+                }
+            }
+            tbody{
+                overflow-y: scroll;
+                height: fit-content;
+            }
+            tr{
+                overflow-y: scroll;
+            }
+        }
+
+    }
+
+
+}
+.logout-btn{
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 5px 10px;
+    height: fit-content;
+    width: 9vw;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.533);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.95);
+    &:hover{
+        background-color: rgba(255, 0, 0, 0.8);
+        color: gold;
+        transform: scale(1);
+        border: 1px solid red;
+    }
+}

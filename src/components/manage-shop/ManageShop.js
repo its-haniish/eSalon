@@ -207,7 +207,7 @@ const ManageShop = ({ setPage }) => {
             id="address"
             type="text"
             name="address"
-            placeholder="Address"
+            placeholder="Address description (visible to your customers)"
             onChange={handleInputChange}
             value={inputData.address || ''}
             draggable="false"
@@ -215,7 +215,7 @@ const ManageShop = ({ setPage }) => {
           <button id="coordinates-btn"
             onClick={handleFetchCoordinates}>
             <i class="fa-solid fa-location-crosshairs"></i>
-            Fetch Coordinates
+            Fetch Location
           </button>
         </div>
 

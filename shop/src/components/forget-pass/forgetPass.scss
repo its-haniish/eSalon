@@ -1,0 +1,77 @@
+.forget-form-div{
+    background: url(https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?w=900&t=st=1699298356~exp=1699298956~hmac=5342eae455650053a4abef48e7fb621374386dc3521c4dfc5b7eca095716f601) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .forget-form-1,.forget-form-2{
+        width: 80vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        h2{
+            font-family: 'tilt neon','Courier New', Courier, monospace;
+            letter-spacing: 3px;
+            font-size: 2.2rem;
+            background: linear-gradient(purple,lightblue,white);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        p{
+            color: white;
+            font-family: 'tilt neon','Courier New', Courier, monospace;
+            letter-spacing: 3px;
+            span{
+                color: yellowgreen;
+                cursor: pointer;
+            &:hover{
+                color: gold;
+            }
+            }
+        }
+        input{
+            background: none;
+            border: none;
+            border-bottom: 2px solid yellowgreen;
+            width: 60%;
+            height: 8vh;
+            text-align: center;
+            caret-color: yellowgreen;
+            color: yellowgreen;
+            font-size: 1.2rem;
+            &:focus{
+                outline: none;
+                border-bottom: 2px solid gold;
+            }
+        }
+        #verify-forget-otp,#send-forget-otp{
+            background: none;
+            border: none;
+            border: 2px solid yellowgreen;
+            border-radius: 20px;
+            width: 20%;
+            color: yellowgreen;
+            font-weight: 700;
+            cursor: pointer;
+            height: 8vh;
+            text-align: center;
+            transform: scale(0.9);
+            &:hover{
+                transform: scale(0.91);
+                border:2px solid gold;
+                color: gold;
+            }
+        }
+
+    }
+    .forget-form-1{
+        display: flex;
+    }
+    .forget-form-2{
+        display: none;
+    }
+}

@@ -1,14 +1,2 @@
-# Node.js
-node_modules/
-
-# Visual Studio Code
-.vscode/
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-
-# Local Netlify folder
-.netlify
+node_modules
+.env

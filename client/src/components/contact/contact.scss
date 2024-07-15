@@ -1,0 +1,94 @@
+.contact-form{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 2vh;
+
+    h1{
+        font-size: 2.3rem;
+        font-weight: 100;
+        background: linear-gradient(aqua,lightgreen);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+    }
+    
+    .division-1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        height: 40%;
+        width: 70%;
+        div{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+            align-items: center;
+            input{
+                background: rgba(0,0,0,0.2);
+                border: none;
+                text-align: center;
+                border-radius: 10px;
+                width: 30vw;
+                padding: 10px ;
+                color: gold;
+                letter-spacing: 2px;
+                font-size: 1.2rem;
+                font-weight: 100;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        textarea{
+            background: rgba(0,0,0,0.2);
+            border: none;
+            text-align: center;
+            border-radius: 10px;
+            color: gold;
+            caret-color: gold;
+            letter-spacing: 2px;
+            height: 100%;
+            width: 40%;
+            padding-top: 10px;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:focus{
+                outline: none;
+            }
+            &::placeholder{
+                color: rgba(255, 217, 0, 0.448);
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    input[type="submit"]{
+        background: rgba(0,0,0,0.2);
+        padding: 5px 10px;
+        border: 2px solid yellowgreen;
+        border-radius: 10px;
+        color: yellowgreen;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+        transform: scale(0.96);
+        &:hover{
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.296);
+            color: aqua;
+            border: 2px solid aqua;
+            transform: scale(1);
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+    }
+
+}

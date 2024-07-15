@@ -1,0 +1,44 @@
+nav{    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0px 20px;
+    align-items: center;
+    height: 10vh;
+    background: none;
+
+    img{
+            width: 50px;
+            float: left;
+            padding-top: 8px;
+            margin-right: 7px;
+        }
+    
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    ul li, ul li i{
+        cursor: pointer;
+        font-weight: 100;
+        font-size: 1.3rem;
+        background: linear-gradient(gold,lightgreen);
+        -webkit-background-clip: text;
+        color: transparent;
+        &:hover{
+            background: linear-gradient(white,lightgreen);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+    .links{
+        gap: 5vw;
+    }
+    .social{
+        gap: 2vw;
+    }
+
+}

@@ -1,0 +1,49 @@
+.salon{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;    
+    padding-top: 10px;
+    .shop-box,.appointment-box{
+        height: 88%;
+        background: rgb(94, 93, 93);
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgb(94, 93, 93);
+        position: relative;
+        padding: 0px 16px;      
+        h2{
+            font-family: 'tilt neon','Courier New', Courier, monospace;
+            background: linear-gradient(orange,white);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 2rem;
+            font-weight: lighter;
+            text-align: center;
+            border-bottom: 2px solid grey;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+
+        }
+    }
+    .shop-box{
+        width: 50%;
+        overflow-y: scroll;
+        text-align: center;
+    }
+    .appointment-box{
+        width: 40%;
+        overflow-y: scroll;
+        text-align: center;
+    }
+
+}
+
+.salon-item{
+    img{
+        width: 45px;
+    }
+}

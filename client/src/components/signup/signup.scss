@@ -1,0 +1,109 @@
+.signup-form{
+    width: 100vw;
+    height: 100vh;
+    background: url(https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?w=900&t=st=1699298356~exp=1699298956~hmac=5342eae455650053a4abef48e7fb621374386dc3521c4dfc5b7eca095716f601) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    
+    h2{
+        background: linear-gradient(yellowgreen,gold);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 3rem;
+        font-family: 'tilt neon','Courier New', Courier, monospace;
+    }
+    p{
+        color: white;
+        font-family: 'tilt neon','Courier New', Courier, monospace;
+        span{
+            color: gold;
+        }
+        span:hover{
+            color: yellowgreen;
+            cursor: pointer;
+        }
+    }
+
+    input{
+        background: none;
+        border: none;
+        border-bottom: 2px solid yellowgreen;
+        width: 40%;
+        height: 7vh;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        font-family: 'Tilt Neon','Courier New', Courier, monospace;
+        letter-spacing: 2px;
+    }
+    input:focus{
+        outline: none; 
+        border-bottom: 2px solid gold;
+    }
+    #submit-signup{
+        display: block;
+        background: none;
+        border: 2px solid yellowgreen;
+        width: 20%;
+        height: fit-content;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        font-family: 'Tilt Neon','Courier New', Courier, monospace;
+        letter-spacing: 2px;
+        text-align: center;
+        border-radius: 10px;
+        &:hover{
+            border: 2px solid gold;
+            color: gold;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.signup-verify-form{
+    display: none;
+    width: 100vw;
+    height: fit-content;
+    margin-top: -12vh;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    z-index: 10;
+    input{
+        padding: 10px;
+        border-radius: 10px;
+    }
+    input[type="text"]{
+        width: 20vw;
+        text-align: center;
+        background: none;
+        border: 2px solid yellowgreen;
+        color: gold;
+
+        &:focus{
+           outline: none;
+        }
+
+    }
+    input[type='submit']{
+        background: none;
+        width: 10vw;
+        border: 2px solid yellowgreen;
+        cursor: pointer;
+        align-items: center;
+        transform: scale(0.9);
+        color: aqua;
+        &:hover{
+            border: 2px solid aqua;
+            color: yellowgreen;
+            transform: scale(1);
+        }
+    }
+}

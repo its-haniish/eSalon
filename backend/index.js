@@ -4,12 +4,13 @@ const PORT = process.env.PORT || 8080;
 
 // importing required packages 
 const express = require('express');
-const cors = require("cors");
-
-// setting express server and middlewares
 const app = express();
+
+const cors = require("cors");
+// setting express server and middlewares
+
+app.use(express.json({ limit: '50mb' }));
 app.use(cors());
-app.use(express.json({ limit: '10mb' }));
 
 // importing and calling connectDB function
 const connectDB = require('./controllers/functions/connectDB.js');

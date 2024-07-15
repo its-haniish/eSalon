@@ -5,7 +5,7 @@ const ShopItem = ({ shop, handleShopItemClick }) => {
   const [shopLogo, setShopLogo] = useState(false);
 
   const getShopLogo = async () => {
-    let response = await fetch('https://esalon-server.onrender.com/getLogo', {
+    let response = await fetch('https://esalon-server-s7zp.onrender.com/getLogo', {
       method : 'POST',
       body : JSON.stringify({email : shop.email}),
       headers : {

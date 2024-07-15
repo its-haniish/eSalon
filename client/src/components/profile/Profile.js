@@ -17,7 +17,7 @@ const Profile = ({ setPage }) => {
     };
     const handleImageUpload = async () => {
         if(selectedFile.current !== process.env.PUBLIC_URL + '/favicon.ico' && selectedFile.current !== null){
-             await fetch('https://esalon-server.onrender.com/addImage', {
+             await fetch('https://esalon-server-s7zp.onrender.com/addImage', {
                 method: 'POST',
                 body: JSON.stringify({ email: JSON.parse(localStorage.getItem("eSalon-User")).email, image: selectedFile.current }),
                 headers: { 'Content-Type': 'application/json' }
@@ -30,7 +30,7 @@ const Profile = ({ setPage }) => {
         e.preventDefault();
         if (userInfo.current) {
             // Send a request to update the user's information on the server
-            const response = await fetch('https://esalon-server.onrender.com/update', {
+            const response = await fetch('https://esalon-server-s7zp.onrender.com/update', {
                 method: 'POST',
                 body: JSON.stringify({ email: userInfo.current.email, ...newData }),
                 headers: { 'Content-Type': 'application/json' }
@@ -81,7 +81,7 @@ const Profile = ({ setPage }) => {
     const handleDeleteAccount = async()=>{
         const userPass = prompt("Enter your password to delete your account?");
         if(userInfo.current.password === userPass){
-            const response = await fetch('https://esalon-server.onrender.com/delete', {
+            const response = await fetch('https://esalon-server-s7zp.onrender.com/delete', {
                 method: 'POST',
                 body: JSON.stringify({ email: userInfo.current.email }),
                 headers: { 'Content-Type': 'application/json' }
@@ -104,7 +104,7 @@ const Profile = ({ setPage }) => {
     useLayoutEffect(() => {
         const showUserInfo = async () => {
             if (userInfo.current) {
-                let response = await fetch('https://esalon-server.onrender.com/getUserInfo', {
+                let response = await fetch('https://esalon-server-s7zp.onrender.com/getUserInfo', {
                     method: 'POST',
                     body: JSON.stringify({ email: userInfo.current.email }),
                     headers: { 'Content-Type': 'application/json' }
@@ -116,7 +116,7 @@ const Profile = ({ setPage }) => {
         showUserInfo();
 
         const showUserImage = async () => {
-            let response = await fetch('https://esalon-server.onrender.com/getImage',{
+            let response = await fetch('https://esalon-server-s7zp.onrender.com/getImage',{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify({email:userInfo.current.email})

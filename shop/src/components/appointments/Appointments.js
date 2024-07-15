@@ -20,7 +20,7 @@ const Appointments = ({setPage}) => {
       }
       
       const handleApprove = async(appointment) => {
-        let response  = await fetch('https://esalon-server.onrender.com/updateAppointment', {
+        let response  = await fetch('https://esalon-server-s7zp.onrender.com/updateAppointment', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const Appointments = ({setPage}) => {
       }
 
       const handleReject = async(appointment) => {
-        let response  = await fetch('https://esalon-server.onrender.com/updateAppointment', {
+        let response  = await fetch('https://esalon-server-s7zp.onrender.com/updateAppointment', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ const Appointments = ({setPage}) => {
 
       useEffect(()=>{
         const getAppointments =async (shopName) => {
-          let response = await fetch('https://esalon-server.onrender.com/getAppointmentData', {
+          let response = await fetch('https://esalon-server-s7zp.onrender.com/getAppointmentData', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const Appointments = ({setPage}) => {
           }
         }
         const getShopData = () => {
-          let getShopData = fetch('https://esalon-server.onrender.com/getShop', {
+          let getShopData = fetch('https://esalon-server-s7zp.onrender.com/getShop', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

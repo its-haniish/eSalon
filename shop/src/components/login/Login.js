@@ -10,7 +10,7 @@ const Login = ({setPage}) => {
 
   const handleLoginSubmit = async e => {
     e.preventDefault();
-    let response = await fetch('https://esalon-server.onrender.com/loginShop', {
+    let response = await fetch('https://esalon-server-s7zp.onrender.com/loginShop', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data)
@@ -35,7 +35,7 @@ const Login = ({setPage}) => {
 
     const autoLogin = async () => {
       if(localStorage.getItem('eSalon-Shop') != null){
-        let response = await fetch('https://esalon-server.onrender.com/loginShop', {
+        let response = await fetch('https://esalon-server-s7zp.onrender.com/loginShop', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: localStorage.getItem('eSalon-Shop')

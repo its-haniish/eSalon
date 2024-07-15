@@ -5,7 +5,7 @@ const UserImage = ({userEmail}) => {
 
     useEffect(()=>{
         const getUserImage = async (email)=>{
-            let response = await fetch('https://esalon-server.onrender.com/getImage',{
+            let response = await fetch('https://esalon-server-s7zp.onrender.com/getImage',{
                 method:'POST',
                 body:JSON.stringify({email:email}),
                 headers:{'Content-Type':'application/json'}

@@ -36,7 +36,7 @@ const ManageShop = ({ setPage }) => {
     
     const handleImageUpload = async () => {
       try {
-        let response = await fetch('https://esalon-server.onrender.com/addLogo',{
+        let response = await fetch('https://esalon-server-s7zp.onrender.com/addLogo',{
           method:'POST',
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify({
@@ -99,7 +99,7 @@ const ManageShop = ({ setPage }) => {
      file ? 
      handleImageUpload(): console.log('NO file selected');
       try {
-        const response = await fetch('https://esalon-server.onrender.com/updateShop', {
+        const response = await fetch('https://esalon-server-s7zp.onrender.com/updateShop', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ const ManageShop = ({ setPage }) => {
     }
   useEffect(() => {
     const getSavedData = () => {
-      let savedDataResponse = fetch('https://esalon-server.onrender.com/getShop', {
+      let savedDataResponse = fetch('https://esalon-server-s7zp.onrender.com/getShop', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -155,7 +155,7 @@ const ManageShop = ({ setPage }) => {
     getSavedData();
 
     const showLogo = async () => {
-      let response = await fetch('https://esalon-server.onrender.com/getLogo',{
+      let response = await fetch('https://esalon-server-s7zp.onrender.com/getLogo',{
           method:'POST',
           body:JSON.stringify({
             email: JSON.parse(localStorage.getItem('eSalon-Shop')).email,

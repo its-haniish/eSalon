@@ -38,7 +38,7 @@ const Salon = ({ setPage }) => {
   useEffect(() => {
     const getShops = async (coordinates) => {
       try {
-        let response = await fetch('https://esalon-server.onrender.com/nearByShops', {
+        let response = await fetch('https://esalon-server-s7zp.onrender.com/nearByShops', {
           method: 'POST',
           body: JSON.stringify({
             latitude: coordinates.latitude,
@@ -98,7 +98,7 @@ const Salon = ({ setPage }) => {
     try {
 
       let email = JSON.parse(localStorage.getItem("eSalon-User"));
-      let response = await fetch("https://esalon-server.onrender.com/getAppointmentData", {
+      let response = await fetch("https://esalon-server-s7zp.onrender.com/getAppointmentData", {
         method: "POST",
         body: JSON.stringify({email: email.email}),
         headers: {

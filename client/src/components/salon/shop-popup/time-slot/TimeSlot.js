@@ -14,7 +14,7 @@ const TimeSlot = ({ data,shopName,togglePopup,setPage }) => {
     
     // function to get Appointment Timings from backend
     const getAppointmentTimings = async (totalTime) => {
-        const response = await fetch('https://esalon-server.onrender.com/getAppointmentTimings', {
+        const response = await fetch('https://esalon-server-s7zp.onrender.com/getAppointmentTimings', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ const TimeSlot = ({ data,shopName,togglePopup,setPage }) => {
             const selectedTimeSlot = document.querySelector('input[name="time-slot"]:checked').value;
             if (selectedTimeSlot !== '' && selectedTimeSlot !== undefined && selectedTimeSlot !== null){
                 const [shopName, date, startTime, duration] = selectedTimeSlot.split(',');
-                const response = await fetch('https://esalon-server.onrender.com/setAppointment', {
+                const response = await fetch('https://esalon-server-s7zp.onrender.com/setAppointment', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -100,7 +100,7 @@ const TimeSlot = ({ data,shopName,togglePopup,setPage }) => {
 
         const showUserInfo = async () => {
             if (userInfo.current) {
-                let response = await fetch('https://esalon-server.onrender.com/getUserInfo', {
+                let response = await fetch('https://esalon-server-s7zp.onrender.com/getUserInfo', {
                     method: 'POST',
                     body: JSON.stringify({ email: JSON.parse(localStorage.getItem('eSalon-User')).email }),
                     headers: { 'Content-Type': 'application/json' }

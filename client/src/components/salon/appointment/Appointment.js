@@ -18,7 +18,7 @@ const Appointment = ({ data, togglePopup }) => {
 
   const fetchShopData = async (shop) => {
     try {
-      let response = await fetch('https://esalon-server.onrender.com/getShop', {
+      let response = await fetch('https://esalon-server-s7zp.onrender.com/getShop', {
         method: 'POST',
         body: JSON.stringify({ shopName: shop }),
         headers: {
@@ -55,7 +55,7 @@ const Appointment = ({ data, togglePopup }) => {
   const getShopLogo = async () => {
     let responseFromDB =  await fetchShopData(shopName);
     shopEmailRef.current = responseFromDB.email;
-    let response = await fetch('https://esalon-server.onrender.com/getLogo', {
+    let response = await fetch('https://esalon-server-s7zp.onrender.com/getLogo', {
       method : 'POST',
       body : JSON.stringify({email : shopEmailRef.current}),
       headers : {

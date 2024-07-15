@@ -17,7 +17,7 @@ const Contact = ({setPage}) => {
 
     useEffect(() => {
         const showUserInfo = async () => {
-                let response = await fetch('https://esalon-server.onrender.com/getShop', {
+                let response = await fetch('https://esalon-server-s7zp.onrender.com/getShop', {
                     method: 'POST',
                     body: JSON.stringify({ email: JSON.parse(localStorage.getItem('eSalon-Shop')).email }),
                     headers: { 'Content-Type': 'application/json' }

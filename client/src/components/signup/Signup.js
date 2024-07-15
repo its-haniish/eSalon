@@ -13,7 +13,7 @@ const Signup = ({setPage}) => {
 
   const handleSignupSubmit = async e => {
       e.preventDefault();
-      let response = await fetch('https://esalon-server.onrender.com/sendOtp', {
+      let response = await fetch('https://esalon-server-s7zp.onrender.com/sendOtp', {
           method: 'POST',
           body: JSON.stringify({email: data.email ,otp: otp}),
           headers: { 'Content-Type': 'application/json' }});
@@ -36,7 +36,7 @@ const Signup = ({setPage}) => {
   const handleVerifyOtp = async e => {
     e.preventDefault();
     if(userOtp == otp){
-      let response = await fetch('https://esalon-server.onrender.com/signup', {
+      let response = await fetch('https://esalon-server-s7zp.onrender.com/signup', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }})

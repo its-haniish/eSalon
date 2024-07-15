@@ -10,7 +10,7 @@ const ForgetPass = ({setPage}) => {
   const handleSendOtpFormChange = e => setData({...data,[e.target.name]:e.target.value}); 
   const handleSendOtpFormSubmit = async e => {
     e.preventDefault();
-    let response = await fetch('https://esalon-server.onrender.com/sendOtp',{
+    let response = await fetch('https://esalon-server-s7zp.onrender.com/sendOtp',{
       method:'POST',
       body: JSON.stringify({email:data.email,otp:otp}),
       headers: { "Content-Type": "application/json" }
@@ -35,7 +35,7 @@ const ForgetPass = ({setPage}) => {
   const handleSendOtpFormVerify = async e =>{
     e.preventDefault();
     if(userEnteredOtp.otp === otp.otp){
-      let response  = await fetch('https://esalon-server.onrender.com/update',{
+      let response  = await fetch('https://esalon-server-s7zp.onrender.com/update',{
         method: 'POST',
         body: JSON.stringify(data),
         headers: {'Content-Type': 'application/json'}

@@ -5,7 +5,7 @@ const UserName = ({email}) => {
     
     useEffect(()=>{
         const getUserName = async (userEmail)=>{
-            let response = await fetch('https://esalon-server.onrender.com/getUserInfo', {
+            let response = await fetch('https://esalon-server-s7zp.onrender.com/getUserInfo', {
                 method: 'POST',
                 body: JSON.stringify({ email: userEmail}),
                 headers: { 'Content-Type': 'application/json' }
